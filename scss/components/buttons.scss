@@ -1,0 +1,99 @@
+.btn{
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: baseline;
+    transition: $transition-time;
+}
+
+.btn-block{
+    width:100%;
+    border-radius: 16px;
+    padding: 20px 0px;
+    text-align: center;
+    margin: 10px 0px;
+    color: $white;
+    text-decoration: none;
+    transition: $transition-time;
+    font-weight: 700;
+    &:first-child{
+        margin-top:0px!important;
+    }
+}
+
+
+.btn-regular{
+    background: $blue;
+    color: $white;
+    max-width: 310px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: baseline;
+    transition: $transition-time;
+    &:hover{
+        background: $blue-hover;
+    }
+}
+.btn-info{
+    background: $white;
+    color: $blue;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 60px;
+    margin-top: 15px;
+
+}
+.btn-outline{
+    border: 3px solid $blue;
+    border-radius: 30px;
+    color: $blue;
+    padding: 12px 30px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover{
+        background: $blue;
+        color: $white;
+    }
+}
+
+.btn-vk{
+    background: $vk;
+    &:hover{
+        background: $vk-hover;
+    }
+}
+
+.btn-yt{
+    background: $youtube;
+    &:hover{
+        background: $youtube-hover;
+    }
+}
+
+.btn-tg{
+    background: $telegram;
+    &:hover{
+        background: $telegram-hover;
+    }
+}

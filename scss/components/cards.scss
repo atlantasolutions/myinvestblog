@@ -1,0 +1,231 @@
+.cards-wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+    padding: 4rem;
+    margin: 0 auto;
+    width: max-content;
+  }
+  
+  .card {
+    font-family: 'Montserrat', sans-serif;
+    --bg-filter-opacity: 0.5;
+    // background: red;
+    background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+    height: 369px;
+    width: 100%;
+    font-size: 18px;
+    color: $white;
+    border-radius: 1em;
+    padding: 1em;
+    /*margin: 2em;*/
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    // box-shadow: 0 0 5em -1em black;
+    transition: all, $transition-time;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .card--small{
+    height: 250px;
+  }
+  
+  .card:hover {
+    transform: rotate(0);
+    background: $blue;
+    color: $white;
+  }
+
+  .card-item-income{
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+
+  
+  .card h3 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 38px;
+    font-weight: 600;
+    color: $white;
+    max-width: 70%;
+  }
+
+  .card h4 {
+    margin: 0;
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 600;
+    color: $white;
+    margin-block-start: 10px;
+  }
+  
+  .card p {
+    font-size: 0.75em;
+    font-family: 'Montserrat',sans-serif;
+    margin-top: 0.5em;
+    line-height: 2em;
+    color: $white;
+  }
+  
+  .card .tags {
+    display: flex;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+  
+  .card .tags .tag, .card .tags .post-date {
+    font-size: 0.75em;
+    color: $white;
+    // background: rgba(255,255,255,0.5);
+    font-weight: 700;
+    opacity: .6;
+    border-radius: 0.3rem;
+    margin-right: 0.5em;
+    line-height: 1.5em;
+    transition: all, $transition-time;
+  }
+  
+  .card:hover .tags .tag {
+    background: $blue;
+    color: $white;
+  }
+  
+  .card .post-date{
+    margin-left:20px;
+  }
+
+  .card .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.75em;
+    padding: 1em;
+    line-height: 1em;
+    opacity: .8;
+  }
+  
+  .card:before, .card:after {
+    content: '';
+    transform: scale(0);
+    transform-origin: top left;
+    border-radius: 50%;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    z-index: -5;
+    transition: all, $transition-time;
+    transition-timing-function: ease-in-out;
+  }
+  
+  .card:before {
+    background: $blue-hover;
+    width: 250%;
+    height: 250%;
+  }
+  
+  .card:after {
+    background: $blue;
+    color: $white;
+    width: 200%;
+    height: 200%;
+  }
+  
+  .card:hover {
+    color: $blue;
+  }
+  
+  .card:hover:before, .card:hover:after {
+    transform: scale(1);
+  }
+  
+  .card-grid-space .num {
+    font-size: 3em;
+    margin-bottom: 1.2rem;
+    margin-left: 1rem;
+  }
+  
+  .info {
+    font-size: 1.2em;
+    display: flex;
+    padding: 1em 3em;
+    height: 3em;
+  }
+  
+  .info img {
+    height: 3em;
+    margin-right: 0.5em;
+  }
+  
+  .info h1 {
+    font-size: 1em;
+    font-weight: normal;
+  }
+  
+  /* MEDIA QUERIES */
+  @media screen and (max-width: 1285px) {
+    .cards-wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .cards-wrapper {
+      grid-template-columns: 1fr;
+    }
+    .info {
+      justify-content: center;
+    }
+    .card-grid-space .num {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .cards-wrapper {
+      padding: 4rem 2rem;
+    }
+    .card {
+      max-width: calc(100vw - 4rem);
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .info {
+      display: block;
+      text-align: center;
+    }
+    .info h1 {
+      margin: 0;
+    }
+  }
+
+.cards-meta{
+  display: flex;
+  align-content: center;
+  color: $white;
+  opacity: .6;
+  .cards-comments, .cards-views{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    p{
+      margin-left:10px;
+    }
+  }
+  .cards-views{
+    margin-left: 20px;
+  }
+}
+
+.card-meta{
+  margin-bottom: 20px;
+}
